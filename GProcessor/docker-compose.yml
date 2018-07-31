@@ -4,7 +4,16 @@ services:
     image: migruiz/cameras-stream
     container_name: cameras-stream
     environment:
-      ENTRANCECAMRTSP : rtsp://176.61.23.185:554/onvif1
+      EMAIL : rtsp://176.61.23.185:554/onvif1
+    volumes:
+     - videos-location:/videos
+    restart: always
+  youtube:
+    image: migruiz/cameras-videoupload
+    container_name: cameras-videoupload
+    environment:
+      EMAIL : entrancecamera123@gmail.com
+      EMAILPWD : hackol37
     volumes:
      - videos-location:/videos
     restart: always
