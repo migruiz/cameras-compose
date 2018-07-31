@@ -1,0 +1,12 @@
+version: '2'
+services:
+  stream:
+    image: migruiz/cameras-stream
+    container_name: cameras-stream
+    environment:
+      ENTRANCECAMRTSP : rtsp://176.61.23.185:554/onvif1
+    volumes:
+     - videos-location:/videos
+    restart: always
+volumes:
+  videos-location:
