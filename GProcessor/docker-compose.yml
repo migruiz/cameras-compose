@@ -16,7 +16,6 @@ services:
       EMAIL : entrancecamera123@gmail.com
       EMAILPWD : hackol37
       TARGETEMAILS: 'mig.ruiz@gmail.com,soniacarolina.blanco@gmail.com'
-      GOOGLEPROJID : sensors-208011
       GOOGLESTORAGEKEY : /secrets/cameras/googlestorage/key.json
       YOUTUBETOKEN : '/secrets/cameras/youtube/token.json'
       DOORSENSORID : "233945"
