@@ -1,7 +1,7 @@
 version: '2'
 services:
   sensors:
-    image: migruiz/cameras-sensors-rpi3
+    image: migruiz/cameras-sensors-rpi3:r1
     container_name: cameras-sensors
     volumes:
      - camerasfs:/sys/fs/cgroup
