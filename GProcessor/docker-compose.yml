@@ -4,9 +4,10 @@ services:
     image: migruiz/cameras-stream
     container_name: cameras-stream
     environment:
-      EMAIL : rtsp://176.61.23.185:554/onvif1
+      ENTRANCECAMRTSP : rtsp://admin:hackol37@piscos.tk:10554/onvif1
     volumes:
      - videos-location:/videos
+    network_mode: "host"
     restart: always
   youtube:
     image: migruiz/cameras-videoupload
@@ -14,8 +15,11 @@ services:
     environment:
       EMAIL : entrancecamera123@gmail.com
       EMAILPWD : hackol37
+      GOOGLEPROJID : sensors-208011
+      GOOGLESTORAGEKEY : /secrets/cameras/googlestorage/key.json
+      YOUTUBETOKEN : '/secrets/cameras/youtube/token.json'
+      DOORSENSORID : "233945"
     volumes:
      - videos-location:/videos
+     - /home/pi/secrets:/secrets
     restart: always
-volumes:
-  videos-location:
