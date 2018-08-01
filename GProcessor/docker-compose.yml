@@ -20,7 +20,7 @@ services:
       GOOGLESTORAGEKEY : /secrets/cameras/googlestorage/key.json
       YOUTUBETOKEN : '/secrets/cameras/youtube/token.json'
       DOORSENSORID : "233945"
-      YOUTUBECLIENTCONFIG : /secrets/cameras/youtube/client_secret.json'
+      YOUTUBECLIENTCONFIG : '/secrets/cameras/youtube/client_secret.json'
 
     volumes:
      - videos-location:/videos
