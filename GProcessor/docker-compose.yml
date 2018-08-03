@@ -1,7 +1,7 @@
 version: '2'
 services:
   stream:
-    image: migruiz/cameras-stream
+    image: migruiz/cameras-stream:r1
     container_name: cameras-stream
     environment:
       ENTRANCECAMRTSP : rtsp://admin:hackol37@piscos.tk:10554/onvif1
@@ -10,7 +10,7 @@ services:
     network_mode: "host"
     restart: always
   youtube:
-    image: migruiz/cameras-videoupload
+    image: migruiz/cameras-videoupload:r1
     container_name: cameras-videoupload
     environment:
       EMAIL : entrancecamera123@gmail.com
@@ -25,7 +25,7 @@ services:
      - /home/pi/secrets:/secrets
     restart: always
   cron:
-    image: migruiz/cameras-cron
+    image: migruiz/cameras-cron:r1
     container_name: cameras-cron
     volumes:
      - videos-location:/videos
