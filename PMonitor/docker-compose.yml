@@ -7,3 +7,10 @@ services:
      - camerasfs:/sys/fs/cgroup
     restart: always
     privileged: true
+  heartbeat:
+    image: migruiz/cameras-heartbeat-rpi3
+    container_name: cameras-heartbeat
+    volumes:
+     - camerasfs:/sys/fs/cgroup
+    restart: always
+    privileged: true
