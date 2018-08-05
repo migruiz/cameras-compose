@@ -8,7 +8,7 @@ services:
     restart: always
     privileged: true
   heartbeat:
-    image: migruiz/cameras-heartbeat-rpi3
+    image: migruiz/cameras-heartbeat-rpi3:r1
     container_name: cameras-heartbeat
     environment:
       ONCODE : 87347
