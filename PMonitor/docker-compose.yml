@@ -10,6 +10,9 @@ services:
   heartbeat:
     image: migruiz/cameras-heartbeat-rpi3
     container_name: cameras-heartbeat
+    environment:
+      ONCODE : 87347
+      OFFCODE : 87356
     volumes:
      - camerasfs:/sys/fs/cgroup
     restart: always
